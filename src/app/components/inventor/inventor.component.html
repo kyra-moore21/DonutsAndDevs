@@ -1,0 +1,24 @@
+{{callApi()}}
+<h2>List Of Devs</h2>
+@for (d of inventorResult.complete; track $index) {
+    <div class="row">
+        <table class="table col-6">
+            <thead>
+                <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Innovation</th>
+                    <th scope="col">Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr scope="row">
+                    <td>{{d.firstName}}</td>
+                    <td>{{d.lastName}}</td>
+                    <td>{{d.innovation}}</td>
+                    <td>{{d.year}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}
