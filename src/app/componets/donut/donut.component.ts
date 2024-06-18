@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { DonutService } from '../../services/donut.service';
 import { DonutModel } from '../../models/donut-model';
+import { DonutItemComponent } from '../donut-item/donut-item.component';
 
 @Component({
   selector: 'app-donut',
   standalone: true,
-  imports: [],
+  imports: [DonutItemComponent],
   templateUrl: './donut.component.html',
   styleUrl: './donut.component.css'
 })

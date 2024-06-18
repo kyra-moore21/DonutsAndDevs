@@ -1,13 +1,10 @@
-{{callApi()}}
 <div class="row">
     <h2>Donuts</h2>
 </div>
 <ul>
     @for (d of donutResult.results; track d.id) {
             <li>
-                <h1>{{d.name}}</h1>
-                <img class="img" [src]="d.photo" />
-                <a [href]="d.photo_attribution">Source</a>
+                <app-donut-item [DisplayDonut]="d"></app-donut-item>
             </li>
         
     }
