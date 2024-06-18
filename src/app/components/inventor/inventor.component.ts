@@ -16,13 +16,12 @@ export class InventorComponent {
   inventorResult: InventorModel = {} as InventorModel;
 
   ngOnInit(){
-    this.callApi();
-  }
-
-  callApi():void{
     this._inventorService.getInventors().subscribe((response: InventorModel) => {
       console.log(response);
       this.inventorResult = response;
-    })
-  }
+  })
+}
+
+ 
+
 }
